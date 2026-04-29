@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive beginner-to-advanced DSA study platform with topic pages, practice, notes, projects, interview prep, and progress tracking."
+    />
+    <title>DSA Mastery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="DSA Mastery Lab home">
+          <span class="brand-mark">D</span>
+          <span>
+            <strong>DSA Mastery</strong>
+            <small>Learn. Build. Interview.</small>
+          </span>
+        </a>
+
+        <nav class="nav-list" id="navList"></nav>
+
+        <section class="side-panel">
+          <p class="eyebrow">This Week</p>
+          <strong id="weeklyTarget">Solve 12 problems</strong>
+          <div class="mini-meter" aria-hidden="true"><span id="weeklyMeter"></span></div>
+          <small id="weeklyStatus">0 / 12 completed</small>
+        </section>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button class="icon-button mobile-menu" id="menuButton" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="search-wrap">
+            <span aria-hidden="true">Search</span>
+            <input id="globalSearch" type="search" placeholder="Search topics, patterns, projects..." />
+          </div>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+            <span id="themeIcon">Moon</span>
+            <span id="themeText">Dark</span>
+          </button>
+        </header>
+
+        <section id="home" class="page active"></section>
+        <section id="topics" class="page"></section>
+        <section id="algorithms" class="page"></section>
+        <section id="complexity" class="page"></section>
+        <section id="practice" class="page"></section>
+        <section id="notes" class="page"></section>
+        <section id="projects" class="page"></section>
+        <section id="interview" class="page"></section>
+        <section id="dashboard" class="page"></section>
+      </main>
+    </div>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
